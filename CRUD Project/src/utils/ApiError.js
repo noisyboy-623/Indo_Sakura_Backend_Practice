@@ -4,4 +4,4 @@ const ApiError = (statusCode, message) => {
   return error;
 };
 
-module.exports=ApiError;
+module.exports = ApiError;

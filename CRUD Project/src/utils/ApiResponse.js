@@ -15,5 +15,4 @@ const ApiResponse = (statusCode, data, message) => {
     },
   };
 };
-
-module.exports=ApiResponse;
+module.exports = ApiResponse;

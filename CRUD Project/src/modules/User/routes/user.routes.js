@@ -1,6 +1,6 @@
 const express = require("express");
 const userController = require("../controllers/user.controller");
-const authMiddleware = require("../middlewares/auth.middleware");
+const authMiddleware = require("../../../middlewares/auth.middleware");
 const authValidator = require("../validator/auth.validator")
 // const UserTestCtrl = require("../controllers/user.ctrl.class");
 // const userTestCtrl = new UserTestCtrl()
@@ -8,7 +8,7 @@ const authValidator = require("../validator/auth.validator")
 const router = express.Router();
 
 // POST /api/users/register
-router.post("/register", authValidator.registerValidator, userController.createUser);
+router.post("/register", userController.createUser);
 // router.post("/register", userTestCtrl.createUser);
 
 // POST /api/users/login

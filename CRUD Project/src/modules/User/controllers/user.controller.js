@@ -1,15 +1,42 @@
 const UserService = require("../services/user.service");
-const { default: ApiResponse } = require("../utils/ApiResponse");
+const ApiResponse = require("../../../utils/ApiResponse.js");
 const userService = new UserService();
+const registerSchema = require("../validation/auth.validation")
+const logger = require("../../../utils/logger.js");
 
 // createUser controller
 const createUser = async (req, res) => {
   try {
-    const user = await userService.createUser(req.body);
+    const { error, value } = registerSchema.validate(req.body);
+    if (error) {
+      logger.warn("User registration validation failed", {
+        error: error.details[0].message,
+      });
+
+      return res.status(400).json({
+        message: error.details[0].message,
+      });
+    }
+
+    logger.info("Creating new user", {
+      username: value.username,
+      email: value.email,
+    });
+
+    const user = await userService.createUser(value);
+
+    logger.info("User created successfully", {
+      username: user.username,
+      email: user.email,
+    });
 
     return ApiResponse(201, user, "User created successfully").send(res);
   } catch (error) {
-    console.log("Error in createUser controller:", error);
+    logger.error("Error in createUser controller", {
+      message: error.message,
+      statusCode: error.statusCode,
+      stack: error.stack,
+    });
 
     res.status(error.statusCode || 500).json({
       message: error.message || "Internal server error",
@@ -19,6 +46,10 @@ const createUser = async (req, res) => {
 
 const loginUser = async (req, res) => {
   try {
+    logger.info("Login attempt", {
+      email: req.body.email,
+      username: req.body.username,
+    });
     const data = await userService.loginUser(req.body);
     // res.status(200).json({
     //   message: "User logged in successfully",
@@ -26,11 +57,19 @@ const loginUser = async (req, res) => {
     //   accessToken: data.accessToken,
     //   refreshToken: data.refreshToken,
     // });
+    logger.info("User logged in successfully", {
+      userId: data.user._id,
+      username: data.user.username,
+    });
     return res
       .status(200)
       .json(ApiResponse(200, data, "User logged in successfully"));
   } catch (error) {
-    console.log("Error in loginUser controller:", error);
+     logger.error("Error in loginUser controller", {
+      message: error.message,
+      statusCode: error.statusCode,
+      stack: error.stack,
+    });
 
     res.status(error.statusCode || 500).json({
       message: error.message || "Internal server error",

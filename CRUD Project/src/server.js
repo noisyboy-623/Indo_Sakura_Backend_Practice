@@ -1,10 +1,14 @@
-require('dotenv').config()
+require("dotenv").config();
 
-const app = require('./app')
-const connectDB = require('./db/connection')
+const app = require("./app");
+const connectDB = require("./db/connection");
+const AdminService = require("./modules/Admin/services/admin.service");
+const adminService = new AdminService();
 
-connectDB()
+
+adminService.createSuperAdmin();
+connectDB();
 
 app.listen(3000, () => {
-    console.log('Server running on port 3000')
-})
+  console.log("Server running on port 3000");
+});
