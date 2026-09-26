@@ -51,12 +51,6 @@ const loginUser = async (req, res) => {
       username: req.body.username,
     });
     const data = await userService.loginUser(req.body);
-    // res.status(200).json({
-    //   message: "User logged in successfully",
-    //   user: data.user,
-    //   accessToken: data.accessToken,
-    //   refreshToken: data.refreshToken,
-    // });
     logger.info("User logged in successfully", {
       userId: data.user._id,
       username: data.user.username,

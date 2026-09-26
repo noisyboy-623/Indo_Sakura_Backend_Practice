@@ -30,4 +30,74 @@ const loginAdmin = async (req, res) => {
   }
 };
 
-module.exports = { loginAdmin };
+const changeAdminPass = async (req, res) => {
+  try {
+    logger.info("Password change attempt", {
+      email: req.user.email,
+      role: req.user.role,
+    });
+    const adminData = {
+      ...req.body,
+      id: req.user.id,
+    };
+    const data = await adminService.changeAdminPass(adminData);
+    logger.info("Password changed successfully", {
+      userId: data._id,
+      role: data.role,
+    });
+    return res
+      .status(200)
+      .json(ApiResponse(200, data, "Password changed successfully"));
+  } catch (error) {
+    logger.error("Error in changeAdminPass controller", {
+      message: error.message,
+      statusCode: error.statusCode,
+      stack: error.stack,
+    });
+
+    res.status(error.statusCode || 500).json({
+      message: error.message || "Internal server error",
+    });
+  }
+};
+
+const approveUser = async (req, res) => {
+  try {
+    const userId = req.params.id;
+    const adminId = req.user.id;
+
+    logger.info("Approve user request received", {
+      userId,
+      adminId,
+      role: req.user.role,
+    });
+
+    const data = await adminService.approveUser(
+      userId,
+      adminId
+    );
+
+    return res
+      .status(200)
+      .json(
+        ApiResponse(
+          200,
+          data,
+          "User approved successfully"
+        )
+      );
+  } catch (error) {
+    logger.error("Error in approveUser controller", {
+      message: error.message,
+      statusCode: error.statusCode,
+      stack: error.stack,
+      userId: req.params.id,
+      adminId: req.user?.id,
+    });
+
+    return res.status(error.statusCode || 500).json({
+      message: error.message || "Internal server error",
+    });
+  }
+};
+module.exports = { loginAdmin, changeAdminPass, approveUser };

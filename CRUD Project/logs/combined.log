@@ -43,3 +43,47 @@
 {"email":"superadmin@admins.com","level":"info","message":"Login attempt","timestamp":"2026-09-25T19:12:56.200Z"}
 {"level":"info","message":"Login successful","timestamp":"2026-09-25T19:12:56.391Z","userId":"6ab6b73a0310c5f96e0e8788"}
 {"level":"info","message":"User logged in successfully","timestamp":"2026-09-25T19:12:56.398Z","userId":"6ab6b73a0310c5f96e0e8788"}
+{"email":"superadmin@admins.com","level":"info","message":"Login attempt","timestamp":"2026-09-26T05:36:13.382Z"}
+{"level":"info","message":"Login successful","timestamp":"2026-09-26T05:36:13.751Z","userId":"6ab6b73a0310c5f96e0e8788"}
+{"level":"info","message":"User logged in successfully","timestamp":"2026-09-26T05:36:13.751Z","userId":"6ab6b73a0310c5f96e0e8788"}
+{"email":"test_4@test.com","level":"info","message":"Login attempt","timestamp":"2026-09-26T06:01:44.036Z"}
+{"level":"info","message":"Login successful","timestamp":"2026-09-26T06:01:44.207Z","userId":"6ab40d6e28efc01bb7743916","username":"test_4"}
+{"level":"info","message":"User logged in successfully","timestamp":"2026-09-26T06:01:44.208Z","userId":"6ab40d6e28efc01bb7743916","username":"test_4"}
+{"email":"superadmin@admins.com","level":"info","message":"Login attempt","timestamp":"2026-09-26T06:12:14.827Z"}
+{"level":"info","message":"Login successful","timestamp":"2026-09-26T06:12:14.991Z","userId":"6ab6b73a0310c5f96e0e8788"}
+{"level":"info","message":"User logged in successfully","timestamp":"2026-09-26T06:12:14.991Z","userId":"6ab6b73a0310c5f96e0e8788"}
+{"email":"superadmin@admins.com","level":"info","message":"Login attempt","timestamp":"2026-09-26T07:08:08.112Z"}
+{"level":"info","message":"Login successful","timestamp":"2026-09-26T07:08:11.160Z","userId":"6ab6b73a0310c5f96e0e8788"}
+{"level":"info","message":"User logged in successfully","timestamp":"2026-09-26T07:08:11.160Z","userId":"6ab6b73a0310c5f96e0e8788"}
+{"level":"info","message":"Password change attempt","timestamp":"2026-09-26T07:08:46.590Z"}
+{"level":"warn","message":"Passwords do not match","timestamp":"2026-09-26T07:08:46.901Z","userId":"6ab6b73a0310c5f96e0e8788"}
+{"level":"error","message":"Error in changeAdminPass controller Passwords do not match","stack":"Error: Passwords do not match\n    at ApiError (C:\\Users\\ASUS\\OneDrive\\Desktop\\Indo_Sakura_Backend\\CRUD Project\\src\\utils\\ApiError.js:2:17)\n    at AdminService.changeAdminPass (C:\\Users\\ASUS\\OneDrive\\Desktop\\Indo_Sakura_Backend\\CRUD Project\\src\\modules\\Admin\\services\\admin.service.js:138:15)\n    at async changeAdminPass (C:\\Users\\ASUS\\OneDrive\\Desktop\\Indo_Sakura_Backend\\CRUD Project\\src\\modules\\Admin\\controllers\\admin.controller.js:43:18)","statusCode":400,"timestamp":"2026-09-26T07:08:46.901Z"}
+{"level":"info","message":"Password change attempt","timestamp":"2026-09-26T07:09:03.794Z"}
+{"level":"warn","message":"invalid password","timestamp":"2026-09-26T07:09:03.928Z","userId":"6ab6b73a0310c5f96e0e8788"}
+{"level":"error","message":"Error in changeAdminPass controller Invalid Credentials","stack":"Error: Invalid Credentials\n    at ApiError (C:\\Users\\ASUS\\OneDrive\\Desktop\\Indo_Sakura_Backend\\CRUD Project\\src\\utils\\ApiError.js:2:17)\n    at AdminService.changeAdminPass (C:\\Users\\ASUS\\OneDrive\\Desktop\\Indo_Sakura_Backend\\CRUD Project\\src\\modules\\Admin\\services\\admin.service.js:130:17)\n    at async changeAdminPass (C:\\Users\\ASUS\\OneDrive\\Desktop\\Indo_Sakura_Backend\\CRUD Project\\src\\modules\\Admin\\controllers\\admin.controller.js:43:18)","statusCode":400,"timestamp":"2026-09-26T07:09:03.928Z"}
+{"level":"info","message":"Password change attempt","timestamp":"2026-09-26T07:09:12.593Z"}
+{"level":"info","message":"Password changed successfully","role":"SUPER_ADMIN","timestamp":"2026-09-26T07:09:13.905Z","userId":"6ab6b73a0310c5f96e0e8788"}
+{"email":"test_5@test.com","level":"info","message":"Creating new user","timestamp":"2026-09-26T08:21:04.547Z","username":"test_5"}
+{"level":"info","message":"User saved to database","timestamp":"2026-09-26T08:21:23.670Z","userId":"6ab78079ca44d32a65a1ce45","username":"test_5"}
+{"email":"test_5@test.com","level":"info","message":"User created successfully","timestamp":"2026-09-26T08:21:23.671Z","username":"test_5"}
+{"email":"superadmin@admins.com","level":"info","message":"Login attempt","timestamp":"2026-09-26T08:29:42.120Z"}
+{"level":"error","message":"Error in loginAdmin service user is not defined","stack":"ReferenceError: user is not defined\n    at AdminService.loginAdmin (C:\\Users\\ASUS\\OneDrive\\Desktop\\Indo_Sakura_Backend\\CRUD Project\\src\\modules\\Admin\\services\\admin.service.js:67:21)\n    at async loginAdmin (C:\\Users\\ASUS\\OneDrive\\Desktop\\Indo_Sakura_Backend\\CRUD Project\\src\\modules\\Admin\\controllers\\admin.controller.js:11:18)","timestamp":"2026-09-26T08:29:43.958Z"}
+{"level":"error","message":"Error in loginAdmin controller user is not defined","stack":"ReferenceError: user is not defined\n    at AdminService.loginAdmin (C:\\Users\\ASUS\\OneDrive\\Desktop\\Indo_Sakura_Backend\\CRUD Project\\src\\modules\\Admin\\services\\admin.service.js:67:21)\n    at async loginAdmin (C:\\Users\\ASUS\\OneDrive\\Desktop\\Indo_Sakura_Backend\\CRUD Project\\src\\modules\\Admin\\controllers\\admin.controller.js:11:18)","timestamp":"2026-09-26T08:29:43.959Z"}
+{"email":"superadmin@admins.com","level":"info","message":"Login attempt","timestamp":"2026-09-26T08:30:23.314Z"}
+{"level":"info","message":"Login successful","timestamp":"2026-09-26T08:30:24.289Z","userId":"6ab6b73a0310c5f96e0e8788"}
+{"level":"info","message":"User logged in successfully","timestamp":"2026-09-26T08:30:24.303Z","userId":"6ab6b73a0310c5f96e0e8788"}
+{"adminId":"6ab6b73a0310c5f96e0e8788","level":"info","message":"Approve user request received","timestamp":"2026-09-26T08:34:17.946Z","userId":"6ab78079ca44d32a65a1ce45"}
+{"adminId":"6ab6b73a0310c5f96e0e8788","level":"info","message":"User approval attempt","timestamp":"2026-09-26T08:34:17.947Z","userId":"6ab78079ca44d32a65a1ce45"}
+{"approvedBy":"6ab6b73a0310c5f96e0e8788","level":"info","message":"User approved successfully","timestamp":"2026-09-26T08:34:18.165Z","userId":"6ab78079ca44d32a65a1ce45"}
+{"adminId":"6ab6b73a0310c5f96e0e8788","level":"info","message":"Approve user request received","timestamp":"2026-09-26T08:34:54.422Z","userId":"6ab78079ca44d32a65a1ce45"}
+{"adminId":"6ab6b73a0310c5f96e0e8788","level":"info","message":"User approval attempt","timestamp":"2026-09-26T08:34:54.422Z","userId":"6ab78079ca44d32a65a1ce45"}
+{"approvedBy":"6ab6b73a0310c5f96e0e8788","level":"info","message":"User approved successfully","timestamp":"2026-09-26T08:34:54.787Z","userId":"6ab78079ca44d32a65a1ce45"}
+{"email":"superadmin@admins.com","level":"info","message":"Login attempt","timestamp":"2026-09-26T08:38:18.408Z"}
+{"level":"info","message":"Login successful","timestamp":"2026-09-26T08:38:18.701Z","userId":"6ab6b73a0310c5f96e0e8788"}
+{"level":"info","message":"User logged in successfully","timestamp":"2026-09-26T08:38:18.702Z","userId":"6ab6b73a0310c5f96e0e8788"}
+{"level":"info","message":"Password change attempt","timestamp":"2026-09-26T08:38:37.954Z"}
+{"level":"info","message":"Password changed successfully","role":"SUPER_ADMIN","timestamp":"2026-09-26T08:38:38.700Z","userId":"6ab6b73a0310c5f96e0e8788"}
+{"level":"info","message":"Checking Super Admin configuration","timestamp":"2026-09-26T08:44:22.083Z"}
+{"adminId":"6ab6b73a0310c5f96e0e8788","email":"superadmin@admins.com","level":"info","message":"Super Admin already exists","timestamp":"2026-09-26T08:44:25.472Z"}
+{"level":"info","message":"Checking Super Admin configuration","timestamp":"2026-09-26T08:48:50.026Z"}
+{"adminId":"6ab6b73a0310c5f96e0e8788","email":"superadmin@admins.com","level":"info","message":"Super Admin already exists","timestamp":"2026-09-26T08:48:51.848Z"}
